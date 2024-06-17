@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body{
+            background-color: rgba(255, 249, 228, 1);
+        }
+
+        a{
+            color: orange;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        a:hover{
+            opacity: 0.7;
+        }
+
+        .nav-list li{
+            margin-left: 100px;
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 12vh;
+            background-image: url(Fundo_fosco.png);
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+
+        .nav-list{
+            list-style: none;
+            display: flex;
+        }
+
+
+        .logo{
+            width: 200px;
+            margin-right: 250px;
+        }
+
+        .texto_inicial{
+            color: rgba(36, 54, 100, 1);
+            margin-left: 50px;
+            margin-top: 160px;
+        }
+
+        .t1{
+            font-size: 50px;
+            max-width: 800px;
+            margin-bottom: 10px;
+        }
+
+        .t3{
+            font-size: 20px;
+            max-width: 730px;
+        }
+
+        .apk{
+            width: 350px;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        .bola_azul{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: -1;
+            width: 300px;
+        }
+
+        .bola_amarela{
+            position: absolute;
+            right: 100px;
+            top: 450px;
+            z-index: -1;
+            width: 400px;
+        }
+
+        .bola_laranja{
+            position: absolute;
+            right: 650px;
+            top: 550px;
+            z-index: -1;
+            width: 200px;
+        }
+
+        .bola_verde{
+            position: absolute;
+            left: 0px;
+            top: 600px;
+            z-index: -2;
+            width: 300px;
+        }
+
+        .fundo_onda{
+            width: 100%;
+            height: 350px;
+            margin-top: 305px;
+            background-image: url(ondinha.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        .fundo_onda2{
+            height: 940vh;
+            background-image: url(ondinha2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+
+        .celular{
+            width: 300px;
+            padding-right: 100px;
+        }
+
+        .conheca{
+            width: 490px;
+            padding-right: 100px;
+        }
+
+        .poti{
+            width: 56.5px; 
+            margin-left: 200px; 
+        }
+
+        .div1{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 50px;
+        }
+
+        .motivador{
+            color: transparent;
+            font-size: 90px;
+            max-width: 500px;
+            font-weight: bold;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 3px;
+            margin-left: 130px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .motivador:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .texto_motivador{
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            max-width: 500px;
+            margin-right: 100px;
+        }
+
+        .comecar{
+            margin-top: 50px;
+            margin-left: 230px;
+            width: 900px;
+            height: 130px;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 20px;
+            background-color: rgba(213, 104, 43, 1);
+            color: white;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .comecar:hover{
+            transform: scale(1.17);
+            background-color: white;
+            color: rgba(213, 104, 43, 1);
+        } 
+
+        .div2{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 250px;
+        }
+
+        .sobre{
+            width: 500px;
+            margin-left: 157px;
+            margin-top: 300px;
+        }
+
+        .div3{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .sub_div3{
+            display: flex;
+            flex-direction: column;
+            margin-top: 150px;
+            margin-right: 120px;
+        }
+
+        .lugar{
+            color: white;
+            font-size: 90px;
+            margin-top: 100px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .lugar:hover{
+            color: transparent;
+            transform: scale(1.05);
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 3px;
+        }
+
+        .obt{
+            font-size: 190px;
+            color: transparent;
+            max-width: 300px;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 4px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .obt:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .ano{
+            font-size: 154px;
+            color: transparent;
+            max-width: 300px;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 4px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .ano:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .saiba{
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
+            margin-left: 225px;
+        }
+
+        .div4{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 200px;
+            margin-left: 160px;
+        }
+
+        .sub1_div4{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 35px;
+        }
+
+        .sub2_div4{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            height: 460px;
+            margin-right: 130px;
+        }
+
+        .sub2-1_div4{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .ve{
+            font-size: 230px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 4px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .ve:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .ja{
+            color: white;
+            font-size: 230px;
+            margin-left: 40px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .ja:hover{
+            color: transparent;
+            transform: scale(1.05);
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 4px;
+        }
+
+        .nosso{
+            font-size: 85px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 2px;
+            margin-right: 20px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .nosso:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .video{
+            color: white;
+            font-size: 85px;
+            transition: transform 1000ms ease-in-out;
+        }
+
+        .video:hover{
+            color: transparent;
+            transform: scale(1.05);
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">
+                <img src="PotiZoon.png" alt="PotiZoon" class="logo" >
+            </a>
+            <ul class="nav-list">
+                <li>
+                    <a href="#">Protótipo</a>
+                </li>
+                <li>
+                    <a href="#">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#">Vídeo</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="texto_inicial">
+            <h1 class="t1">A falta do controle zoonótico:</h1>
+            <h3 class="t3">A ameaça invisível que podemos vencer com informação e prevenção.
+                Seja um agente de mudança. A saúde pública começa com cada um de nós.</h3>
+        </div>
+        <a href="#">
+            <picture>
+                <img src="Apk.png" alt="Baixar apk" class="apk">
+            </picture>
+        </a>
+        <picture>
+            <img src="Bola azul.png" alt="Bola azul" class="bola_azul">
+        </picture>
+        <picture>
+            <img src="Bola amarela.png" alt="Bola amarela" class="bola_amarela">
+        </picture>
+        <picture>
+            <img src="Bola laranja.png" alt="Bola laranja" class="bola_laranja">
+        </picture>
+        <picture>
+            <img src="Bola verde.png" alt="Bola verde" class="bola_verde">
+        </picture>
+        <div class="fundo_onda"></div>
+        <div class="fundo_onda2">
+            <div class="div1">
+                <picture>
+                    <img src="Poti.png" alt="PotiZoon" class="poti">
+                </picture>
+                <a href="https://www.figma.com/design/N4UWF6kGszjw84dPZVJF8e/Potiguaras?node-id=87-330&t=LF2lebZsLtYItDn9-0" target="_blank">
+                    <picture>
+                        <img src="Celular.png" alt="Celular" class="celular">
+                    </picture>
+                </a>
+                <picture>
+                    <img src="Conheça.png" alt="Conheça o APP" class="conheca">
+                </picture>
+            </div>
+            <div class="div2">
+                <h1 class="motivador">
+                    Explore,
+                    Aprenda,
+                    Combata.
+                </h1>
+                <h4 class="texto_motivador">Você sabia que muitas doenças 
+                    perigosas para a saúde humana 
+                    têm a sua origem nos animais? 
+                    Pensando nisso, desenvolvemos 
+                    um aplicativo inovador que coloca 
+                    todas as ferramentas necessárias 
+                    para o combate às zoonoses na 
+                    palma da sua mão. Faça a 
+                    diferença! Este é o primeiro passo 
+                    para um futuro livre de zoonoses.</h4>
+            </div>
+                <button class="comecar">
+                    Começar agora
+                </button>
+            <div class="div3">
+                <a href="https://www.instagram.com/ifrn_potiguaras/" target="_blank">
+                    <picture>
+                        <img src="Sobre.png" alt="Foto da equipe" class="sobre">
+                    </picture>
+                <h1 class="saiba">Saiba mais sobre nós</h1>
+                </a>
+                <div class="sub_div3">
+                    <h1 class="lugar">
+                        1° Lugar
+                    </h1>
+                    <h1 class="obt">
+                        OBT
+                    </h1>
+                    <h1 class="ano">
+                        2024
+                    </h1>
+                </div>
+            </div>
+            <div class="div4">
+                <div class="sub1_div4">
+                    <h1 class="ve">Ve</h1>
+                    <h1 class="ja">Ja</h1>
+                </div>
+                <div class="sub2_div4">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/53fKma5T2qA?si=A2qmGGNRq1atTq6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="sub2-1_div4">
+                        <h1 class="nosso">Nosso</h1>
+                        <h1 class="video">Vídeo</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="div5">
+                <div class="sub1_div5">
+                    <h1>Equipe</h1>
+                    <h3>Leonardo Minora</h3>   
+                    <h3>Lucas Francisco</h3>   
+                    <h3>Matheus Costa</h3>   
+                    <h3>João Henrique</h3>   
+                    <h3>Sâmia Fernandes</h3>
+                    <h3>Artur Cortez</h3> 
+                    <h3>Ângelo Luís</h3>      
+                </div>
+                <div class="sub2_div5">
+                    <h1>Contato</h1>
+                    <a href="#"><h3>Email: ifrn.potiguaras@gmail.com</h3></a>
+                    <a href="https://www.instagram.com/ifrn_potiguaras/"><h3>Instagram: @ifrn_potiguaras</h3></a>
+                    <a href=""><h3>WhatsApp: (84) 9421-2168</h3></a>
+                    <a href="https://www.youtube.com/@potiguaras"><h3>Youtube: @Potiguaras</h3></a>
+                    <div class="sub2-1_div5">
+                        <picture>
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
