@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <style>
         *{
             margin: 0;
@@ -11,12 +14,14 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-        body{
+        body::-webkit-scrollbar{
             background-color: rgba(255, 249, 228, 1);
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        a{
-            color: orange;
+        nav a{
+            color: rgba(213, 104, 43, 1);
             text-decoration: none;
             transition: 0.3s;
             font-weight: bold;
@@ -27,7 +32,7 @@
         }
 
         .nav-list li{
-            margin-left: 100px;
+            margin-left: 76px;
         }
 
         nav{
@@ -47,12 +52,23 @@
         .nav-list{
             list-style: none;
             display: flex;
+            margin-top: 20px;
         }
 
 
         .logo{
             width: 200px;
             margin-right: 250px;
+        }
+
+        .youtube{
+            width: 40px;
+            z-index: 2;
+        }
+        
+        .instagram{
+            width: 30px;
+            z-index: 2;
         }
 
         .texto_inicial{
@@ -69,13 +85,7 @@
 
         .t3{
             font-size: 20px;
-            max-width: 730px;
-        }
-
-        .apk{
-            width: 350px;
-            margin-left: 50px;
-            margin-top: 70px;
+            max-width: 800px;
         }
 
         .bola_azul{
@@ -121,7 +131,7 @@
         }
 
         .fundo_onda2{
-            height: 940vh;
+            height: 720vh;
             background-image: url(ondinha2.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -130,19 +140,154 @@
 
         .celular{
             width: 300px;
-            padding-right: 100px;
+            margin-right: 50px;
+            transition: transform 1000ms ease-in-out;
         }
 
-        .conheca{
-            width: 490px;
-            padding-right: 100px;
+        .sub1_div1{
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            margin-left: 90px;
         }
 
-        .poti{
-            width: 56.5px; 
-            margin-left: 200px; 
+        .P{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -40px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
+        .P:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .o1{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -25px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .o1:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .t{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -20px;
+            margin-left: 10px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .t:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .i{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -20px;
+            margin-left: 15px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .i:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .Z{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -40px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .Z:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .o2{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -40px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .o2:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+
+        .o3{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            margin-bottom: -40px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .o3:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+        
+        .n{
+            font-size: 95px;
+            color: transparent;
+            -webkit-text-stroke-color: white;
+            -webkit-text-stroke-width: 1px;
+            transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .n:hover{
+            color: white;
+            transform: scale(1.05);
+            -webkit-text-stroke-width: 0px;
+        }
+        
         .div1{
             display: flex;
             align-items: center;
@@ -156,9 +301,11 @@
             max-width: 500px;
             font-weight: bold;
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-width: 2px;
             margin-left: 130px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .motivador:hover{
@@ -172,7 +319,7 @@
             font-weight: bold;
             font-size: 25px;
             max-width: 500px;
-            margin-right: 100px;
+            margin-right: 120px;
         }
 
         .comecar{
@@ -201,6 +348,44 @@
             margin-top: 250px;
         }
 
+        .sub2_div2{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin-right: 150px;
+        }
+
+        .seta{
+            background-image: url(Seta.png);
+            background-repeat: no-repeat;
+            width: 500px;
+            height: 55vh;
+            transition: transform 1000ms ease-in-out;
+            margin-bottom: -150px;
+            margin-top: 50px;
+        }   
+
+        .seta:hover{
+            background-repeat: no-repeat;
+            width: 500px;
+            height: 55vh;
+            background-image: url(Seta.png);
+            transform: translateX(-100px);
+        }
+
+        .conheca{
+            font-size: 140px;
+            color: white;
+            margin-top: 50px;
+            margin-bottom: -50px;
+        }
+
+        .o_app{
+            font-size: 210px;
+            color: white;
+            margin-right: 5px;
+        }
+
         .sobre{
             width: 500px;
             margin-left: 157px;
@@ -213,10 +398,15 @@
             justify-content: space-around;
         }
 
-        .sub_div3{
+        .sub1_div3{
             display: flex;
             flex-direction: column;
-            margin-top: 150px;
+        }
+
+        .sub2_div3{
+            display: flex;
+            flex-direction: column;
+            margin-top: 160px;
             margin-right: 120px;
         }
 
@@ -225,13 +415,15 @@
             font-size: 90px;
             margin-top: 100px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .lugar:hover{
             color: transparent;
             transform: scale(1.05);
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-width: 2px;
         }
 
         .obt{
@@ -239,8 +431,10 @@
             color: transparent;
             max-width: 300px;
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-width: 3px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .obt:hover{
@@ -254,8 +448,10 @@
             color: transparent;
             max-width: 300px;
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-width: 3px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .ano:hover{
@@ -288,7 +484,7 @@
         .sub2_div4{
             display: flex;
             flex-direction: column;
-            width: 600px;
+            width: 590px;
             height: 460px;
             margin-right: 130px;
         }
@@ -304,8 +500,10 @@
             font-size: 230px;
             color: transparent;
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-width: 3px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .ve:hover{
@@ -319,6 +517,8 @@
             font-size: 230px;
             margin-left: 40px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .ja:hover{
@@ -332,9 +532,11 @@
             font-size: 85px;
             color: transparent;
             -webkit-text-stroke-color: white;
-            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-width: 1.5px;
             margin-right: 20px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .nosso:hover{
@@ -347,6 +549,8 @@
             color: white;
             font-size: 85px;
             transition: transform 1000ms ease-in-out;
+            -webkit-user-select: none;
+            user-select: none
         }
 
         .video:hover{
@@ -355,7 +559,135 @@
             -webkit-text-stroke-color: white;
             -webkit-text-stroke-width: 2px;
         }
+
+        .div5{
+            display: flex;
+            align-items: top;
+            justify-content: space-around;
+            margin-top: 200px;
+        }
+
+        .pessoa{
+            width: 400px;
+        }
+
+        .sub1_div5{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin-left: 140px;
+        }
+
+        .sub1_div5 h1{
+            margin-left: 30px;
+        }
+
+        .sub2_div5{
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sub2_div5 h1{
+            margin-left: 30px;
+        }
+
+        h3{
+            font-weight: lighter;
+        }
+
+        .sub1-1_div5{
+            margin-top: 20px;
+            line-height: 40px;
+            opacity: 0.8;
+        }
+
+        .sub2-1_div5{
+            color: white;
+            margin-top: 20px;
+            line-height: 40px;
+            opacity: 0.8;
+        }
+
+        .sub3_div5{
+            margin-right: 145px;
+        }
+
+        li{
+            list-style-type: none;
+        }
+
+        div a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn{
+            background-image: url(Apk.png);
+            background-repeat: no-repeat;
+            width: 430px;
+            margin-top: 70px;
+            margin-left: 50px;
+            height: 17.4vh;
+            transition: transform 1000ms ease-in-out;
+            border: none;
+        }
+
+        .btn:hover{
+            transform: scale(1.05);
+            border: none;
+        }
+
+        .modal-content{
+            margin-top: 200px;
+        }
+
+        .carousel-item{
+            margin-left: 470px;
+            width: 400px;
+        }
+
+        .carousel-inner{
+            margin-top: 200px;
+        }
+
+        .texto_carousel{
+            color: white;
+            margin-left: 575px;
+            margin-bottom: -130px;
+            margin-top: 150px;
+        }
+        
+        .carousel-indicators{
+            width: 400px;
+            position: absolute;
+            left: 267px;
+            top: 210px;
+        }
+
+        .monstro{
+            position: absolute;
+            top: 5505px;
+            left: 0px;
+            background-image: url(monstro.png);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .footer{
+            width: 100%;
+            height: 70vh;
+        }
     </style>
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+    </script>
 </head>
 <body>
     <header>
@@ -374,22 +706,48 @@
                     <a href="#">Vídeo</a>
                 </li>
                 <li>
-                    <a href="#">Contato</a>
+                    <a href="https://www.youtube.com/@potiguaras" target="_blank">
+                        <picture>
+                            <img src="Youtube.png" alt="Ícone do Youtube" class="youtube">
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ifrn_potiguaras/" target="_blank">
+                        <picture>
+                            <img src="Instagram.png" alt="Ícone do Instagram" class="instagram">
+                        </picture>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="texto_inicial">
-            <h1 class="t1">A falta do controle zoonótico:</h1>
-            <h3 class="t3">A ameaça invisível que podemos vencer com informação e prevenção.
-                Seja um agente de mudança. A saúde pública começa com cada um de nós.</h3>
+            <h1 class="t1">
+                Você já pensou no impacto das <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/u/uma-so-saude/doencas-zoonoticas" style="color:rgba(78, 100, 36, 1);" target="_blank">zoonoses</a> na sua vida?
+            </h1>
+            <h3 class="t3"> São doenças transmitidas por animais, muitas vezes despercebidas, que estão mais próximas do que imaginamos. Pensando nisso, criamos um aplicativo revolucionário para entender e combater essas doenças. Torne-se um agente de mudança. A saúde pública começa com cada um de nós.</h3>
         </div>
-        <a href="#">
-            <picture>
-                <img src="Apk.png" alt="Baixar apk" class="apk">
-            </picture>
-        </a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">PotiZoon</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-danger" role="alert">
+                        O APK ainda não está disponível!
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
         <picture>
             <img src="Bola azul.png" alt="Bola azul" class="bola_azul">
         </picture>
@@ -405,17 +763,45 @@
         <div class="fundo_onda"></div>
         <div class="fundo_onda2">
             <div class="div1">
-                <picture>
-                    <img src="Poti.png" alt="PotiZoon" class="poti">
-                </picture>
+                <div class="sub1_div1">
+                    <ul>
+                        <li>
+                            <h1 class="P">P</h1>
+                        </li>
+                        <li>
+                            <h1 class="o1">o</h1>
+                        </li>
+                        <li>
+                            <h1 class="t">t</h1>
+                        </li>
+                        <li>
+                            <h1 class="i">i</h1>
+                        </li>
+                        <li>
+                            <h1 class="Z">Z</h1>
+                        </li>
+                        <li>
+                            <h1 class="o2">o</h1>
+                        </li>
+                        <li>
+                            <h1 class="o3">o</h1>
+                        </li>
+                        <li>
+                            <h1 class="n">n</h1>
+                        </li>
+                    </ul>
+                </div>
                 <a href="https://www.figma.com/design/N4UWF6kGszjw84dPZVJF8e/Potiguaras?node-id=87-330&t=LF2lebZsLtYItDn9-0" target="_blank">
                     <picture>
                         <img src="Celular.png" alt="Celular" class="celular">
                     </picture>
                 </a>
-                <picture>
-                    <img src="Conheça.png" alt="Conheça o APP" class="conheca">
-                </picture>
+                <div class="sub2_div2">
+                    <h1 class="conheca">Conheça</h1>
+                    <div class="seta">
+                    </div>
+                    <h1 class="o_app">o APP</h1>
+                </div>
             </div>
             <div class="div2">
                 <h1 class="motivador">
@@ -438,19 +824,21 @@
                     Começar agora
                 </button>
             <div class="div3">
-                <a href="https://www.instagram.com/ifrn_potiguaras/" target="_blank">
+                <div class="sub1_div3">
                     <picture>
-                        <img src="Sobre.png" alt="Foto da equipe" class="sobre">
+                        <a href="https://www.instagram.com/ifrn_potiguaras/" target="_blank"><img src="Sobre.png" alt="Foto da equipe" class="sobre"></a>
                     </picture>
-                <h1 class="saiba">Saiba mais sobre nós</h1>
-                </a>
-                <div class="sub_div3">
+                <a href="https://www.instagram.com/ifrn_potiguaras/"><h1 class="saiba">Saiba mais sobre nós</h1></a>
+                </div>
+                <div class="sub2_div3">
                     <h1 class="lugar">
                         1° Lugar
                     </h1>
-                    <h1 class="obt">
-                        OBT
-                    </h1>
+                    <a href="https://www.alphalumen.org.br/obt2024/" style="opacity: 1;" target="_blank">
+                        <h1 class="obt">
+                            OBT
+                        </h1>
+                    </a>
                     <h1 class="ano">
                         2024
                     </h1>
@@ -472,28 +860,86 @@
             <div class="div5">
                 <div class="sub1_div5">
                     <h1>Equipe</h1>
-                    <h3>Leonardo Minora</h3>   
-                    <h3>Lucas Francisco</h3>   
-                    <h3>Matheus Costa</h3>   
-                    <h3>João Henrique</h3>   
-                    <h3>Sâmia Fernandes</h3>
-                    <h3>Artur Cortez</h3> 
-                    <h3>Ângelo Luís</h3>      
+                    <div class="sub1-1_div5">
+                        <ul>
+                            <li>Leonardo Minora</li>
+                            <li>Lucas Francisco</li>
+                            <li>Matheus Costa</li>
+                            <li>João Henrique</li>
+                            <li>Sâmia Fernandes</li>
+                            <li>Artur Cortez</li>
+                            <li>Ângelo Luís</li>
+                        </ul>    
+                    </div> 
                 </div>
                 <div class="sub2_div5">
                     <h1>Contato</h1>
-                    <a href="#"><h3>Email: ifrn.potiguaras@gmail.com</h3></a>
-                    <a href="https://www.instagram.com/ifrn_potiguaras/"><h3>Instagram: @ifrn_potiguaras</h3></a>
-                    <a href=""><h3>WhatsApp: (84) 9421-2168</h3></a>
-                    <a href="https://www.youtube.com/@potiguaras"><h3>Youtube: @Potiguaras</h3></a>
                     <div class="sub2-1_div5">
-                        <picture>
-                            <img src="" alt="">
-                        </picture>
+                        <ul>
+                            <a href="https://www.instagram.com/ifrn_potiguaras/"><li>Instagram: @ifrn_potiguaras</li></a>
+                            <a href="https://www.youtube.com/@potiguaras"><li>Youtube: @Potiguaras</li></a>
+                            <li>Email: ifrn.potiguaras@gmail.com</li>
+                            <li>WhatsApp: (84) 9421-2168</li>
+                        </ul>
                     </div>
                 </div>
+                <div class="sub3_div5">
+                    <picture>
+                        <img src="pessoa.png" alt="Pessoa estudando" class="pessoa">
+                    </picture>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="texto_carousel">
+                    <h1>Parceiros</h1>
+                </div>
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="IFRN.png" class="d-block w-100" alt="IFRN">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Alpha.png" class="d-block w-100" alt="Alpha Lumen">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Diatinf.png" class="d-block w-100" alt="Diatinf">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="MIT.png" class="d-block w-100" alt="MIT">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="ITA.png" class="d-block w-100" alt="ITA">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Cloudwalk.png" class="d-block w-100" alt="Cloudwalk">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+              </div>
+            </div>
+            <div class="monstro">
             </div>
         </div>
     </main>
+    <footer>
+        <picture>
+            <img src="Footer.png" alt="Fim da página" class="footer">
+        </picture>
+    </footer>
 </body>
 </html>
