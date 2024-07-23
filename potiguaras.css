@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+header{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0px;
+    width: 100%;
+}
+header button{
+    font-size: 1em;
+}
+picture{
+    display: flex;
+}
+.header, section{
+    width: 90vw;
+    max-width: 80em;
+    margin: 0 auto;
+}
+.header, .header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+.header{
+    padding: 1em 0;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.logo img{
+    width: 6em;
+}
+.header nav ul{
+    display: flex;
+    gap: 1em
+}
+li a{
+    color: #253869;
+}
+li a{
+    color: #273C74;
+    display: flex;
+    transition: all .2s
+}
+li a:hover{
+    color: #0724ff;
+}
+#icons img{
+    height: 1.4em;
+}
+main{
+    background-color:#FFF9E4;   
+}
+.inicio{
+    background-image: url("./assets/images/background-inicio.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: cover;
+}
+h2{
+    font-size: 2em;
+    font-weight: 700;
+    color: #273C74
+}
+p{
+    font-size: 1.1em;
+}
+button{
+    cursor: pointer;
+    padding: .8em 2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #D5682B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 1.1em;
+    transition: all .3s;
+}
+button:hover{
+    background-color: #f78b4c;
+}
+
+#inicio{
+    padding: 3em 0;
+    padding-bottom: 15em;
+    color: white;
+}
+#inicio h2{
+    color: white;
+}
+.inicio .txt{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-bottom: 2em;
+    width: 70%;
+}
+#sobre{
+    padding: 2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -11em;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 2em;
+}
+#sobre h2{
+    width: 100%;
+    margin-bottom: .5em;
+    display: flex;
+    align-items: center;
+}
+.modal, .menu-burger{
+    display: none;
+}
+#sobre h2 span{
+    padding-top: .67em;
+}
+#sobre h2 img{
+    width: 1.5em;
+    padding-top: 0;
+    margin-right: .5em;
+}
+#sobre .container{
+    width: 68%;
+}
+#sobre >img{
+    width: 30%
+}
+#sobre > img{
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#sobre .container > img{
+    display: none;
+}
+#prototipo{
+    padding: 2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    background-image: url("./assets/images/back-pc-prot.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 2em;
+
+}
+#prototipo a img{
+    width: 12em;
+}
+#prototipo h2{
+    font-size: 3em;
+    margin-bottom: .5em;
+    color: white;
+}
+#justificativa{
+    padding: 2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 2em;
+}
+#justificativa .container iframe{
+    display: none;
+}
+#justificativa .container{
+    width: 63%;
+}
+#justificativa > iframe{
+    width: 35%;
+    height: auto;
+    aspect-ratio: 560/315;
+    border-radius: 10px;
+}
+#justificativa h2{
+    margin-bottom: .5em;
+}
+.parceiros{
+    padding: 2em 0;
+    background-color: #4E6424;
+}
+#parceiros h2{
+    text-align: center;
+    margin-bottom: .5em;
+    color: white;
+}
+.swiper-slide img{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.swiper-wrapper{
+    gap: 1em;
+}
+.swiper{
+    padding-bottom: 3em;
+}
+.swiper-pagination-bullet-active{
+    background: #242F0E;
+}
+.listra{
+    height: 3em;
+    width: 100%;
+    background-image: url("./assets/images/listra.png");
+    background-size: contain;
+}
+.modal.open{
+    width: 100vw;
+    max-width: 35em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF9E4;
+    padding: 1em 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+.modal.open nav{
+    flex-direction: column;
+    align-items: start;
+}
+.modal.open nav button{
+    width: 100%;
+}
+.modal.open nav #links{
+    flex-direction: column;
+}
+.modal.open nav #links li a{
+    font-size: 1.4em;
+}
+.icon-modal{
+    width: 100%;
+    text-align: right;
+}
+
+@media only screen and (max-width: 1024px){
+    .header > nav{
+        display: none;
+    }
+    .logo img {
+        width: 1.5em;
+    }
+    .menu-burger{
+        display: flex;
+    }
+    #prototipo{
+        flex-wrap: nowrap;
+    }
+    .inicio .txt{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+    #sobre .container > img{
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+    }
+    #sobre .container p{
+        margin-bottom: 1em;
+    }
+    #sobre > img{
+        display: none;
+    }
+    #sobre .container{
+        width: 100%;
+    }
+    #prototipo a{
+        width: 35%;
+    }
+    #prototipo a img{
+        width: 100%;
+    }
+    #prototipo h2{
+        font-size: 2em;
+    }
+    #prototipo{
+        gap: 1.5em;
+        background-image: url("./assets/images/back-cel-prot.png");
+    }
+    #justificativa > iframe{
+        display: none;
+    }
+    #justificativa .container{
+        width: 100%;
+    }
+    #justificativa .container iframe{
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 560/315;
+        border-radius: 10px;
+    }
+    #justificativa p{
+        margin-bottom: 1em;
+    }
+    button{
+        padding: 1em 2em;
+    }
+}
