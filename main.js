@@ -32,5 +32,5 @@ function menuShow() {
 }
 
 function downloadApp() {
-    window.open(PotiZoon.apk);
+    window.open("PotiZoon.apk");
 }
