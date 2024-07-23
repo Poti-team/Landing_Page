@@ -221,6 +221,7 @@ button:hover{
 }
 .swiper{
     padding-bottom: 3em;
+    z-index: 0;
 }
 .swiper-pagination-bullet-active{
     background: #242F0E;
@@ -237,7 +238,7 @@ button:hover{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    z-index: 33;
+    z-index: 1000000;
     background-color: #FFF9E4;
     padding: 1em 2em;
     position: absolute;
