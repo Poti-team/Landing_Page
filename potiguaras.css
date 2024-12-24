@@ -235,7 +235,7 @@ button:hover{
 .modal.open{
     width: 100%;
     max-width: 35em;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     z-index: 1000000;
